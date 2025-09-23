@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Diablo IV Community Forum</title>
+    <link rel="stylesheet" href="styling.css">
+    <link rel="stylesheet" href="grid.css">
+    <script src="Javascript.js" type="text/javascript"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700;900&family=Cinzel:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    
+    <meta name="description" content="Join the Diablo IV community discussion - share strategies, discuss lore, and connect with fellow players.">
+</head>
+
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html" data-tooltip="Return to the main hub">Home</a></li>
+                <li><a href="portfolio.html" data-tooltip="View game galleries and content">Portfolio</a></li>
+                <li>
+                    <img src="https://th.bing.com/th/id/R.5cf23d257a499004a0e0d373117e8d82?rik=J6Z%2byDsYwdBrmw&pid=ImgRaw&r=0" 
+                         alt="Diablo IV Logo" 
+                         id="logo"
+                         data-tooltip="Diablo IV - The ultimate dark fantasy experience">
+                </li>
+                <li><a href="character.html" data-tooltip="Explore legendary characters">Characters</a></li>
+                <li><a href="forum.html" data-tooltip="Join the community">Forum</a></li>
+                <input type="text" 
+                       placeholder="Search discussions..." 
+                       data-tooltip="Search forum topics"
+                       onkeypress="if(event.key==='Enter') searchForum()">
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="content-section">
+            <h1 class="diablo">Community Forum</h1>
+            <p class="subtitle">Join the Discussion - Share Your Journey Through Sanctuary</p>
+        </section>
+
+        <div class="row">
+            <div class="col-1"></div>
+            <div class="col-10">
+                <!-- Forum Categories -->
+                <section class="forum-categories">
+                    <h2>Forum Categories</h2>
+                    <div class="category-grid">
+                        <div class="category-card" onclick="showCategory('general')">
+                            <h3>🗣️ General Discussion</h3>
+                            <p>Share your thoughts about Diablo IV</p>
+                            <span class="topic-count">156 topics</span>
+                        </div>
+                        
+                        <div class="category-card" onclick="showCategory('builds')">
+                            <h3>⚔️ Character Builds</h3>
+                            <p>Share and discuss character builds</p>
+                            <span class="topic-count">89 topics</span>
+                        </div>
+                        
+                        <div class="category-card" onclick="showCategory('lore')">
+                            <h3>📚 Lore & Story</h3>
+                            <p>Discuss the rich lore of Sanctuary</p>
+                            <span class="topic-count">67 topics</span>
+                        </div>
+                        
+                        <div class="category-card" onclick="showCategory('tips')">
+                            <h3>💡 Tips & Guides</h3>
+                            <p>Help fellow players improve</p>
+                            <span class="topic-count">124 topics</span>
+                        </div>
+                        
+                        <div class="category-card" onclick="showCategory('trading')">
+                            <h3>💰 Trading Post</h3>
+                            <p>Trade items and discuss economy</p>
+                            <span class="topic-count">45 topics</span>
+                        </div>
+                        
+                        <div class="category-card" onclick="showCategory('bugs')">
+                            <h3>🐛 Bug Reports</h3>
+                            <p>Report issues and bugs</p>
+                            <span class="topic-count">23 topics</span>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Recent Discussions -->
+                <section class="forum-section">
+                    <h2>Recent Discussions</h2>
+                    <div class="forum-posts">
+                        <div class="forum-post">
+                            <div class="post-header">
+                                <h4>Best Necromancer Build for Season 3?</h4>
+                                <div class="post-meta">
+                                    <span class="author">by DarkSorcerer92</span>
+                                    <span class="timestamp">2 hours ago</span>
+                                    <span class="replies">23 replies</span>
+                                </div>
+                            </div>
+                            <p>Looking for advice on the most effective Necromancer build for the current season. I'm particularly interested in blood magic builds...</p>
+                            <div class="post-actions">
+                                <button onclick="viewPost(1)">View Discussion</button>
+                                <span class="category-tag">Character Builds</span>
+                            </div>
+                        </div>
+
+                        <div class="forum-post">
+                            <div class="post-header">
+                                <h4>Lilith's True Motivations - Lore Discussion</h4>
+                                <div class="post-meta">
+                                    <span class="author">by LoreKeeper</span>
+                                    <span class="timestamp">5 hours ago</span>
+                                    <span class="replies">45 replies</span>
+                                </div>
+                            </div>
+                            <p>After completing the campaign, I've been thinking about Lilith's motivations. Is she truly evil, or does she genuinely believe she's saving humanity?</p>
+                            <div class="post-actions">
+                                <button onclick="viewPost(2)">View Discussion</button>
+                                <span class="category-tag">Lore & Story</span>
+                            </div>
+                        </div>
+
+                        <div class="forum-post">
+                            <div class="post-header">
+                                <h4>Fastest Leveling Guide 1-100</h4>
+                                <div class="post-meta">
+                                    <span class="author">by SpeedRunner_Pro</span>
+                                    <span class="timestamp">1 day ago</span>
+                                    <span class="replies">67 replies</span>
+                                </div>
+                            </div>
+                            <p>Complete guide for efficient leveling from 1 to 100. Includes optimal routes, XP farming techniques, and season-specific strategies...</p>
+                            <div class="post-actions">
+                                <button onclick="viewPost(3)">View Discussion</button>
+                                <span class="category-tag">Tips & Guides</span>
+                            </div>
+                        </div>
+
+                        <div class="forum-post">
+                            <div class="post-header">
+                                <h4>Weekly Trading Thread - Rare Items</h4>
+                                <div class="post-meta">
+                                    <span class="author">by TradesMaster</span>
+                                    <span class="timestamp">2 days ago</span>
+                                    <span class="replies">156 replies</span>
+                                </div>
+                            </div>
+                            <p>Weekly thread for trading rare and legendary items. Please follow the format: [W] = Want, [H] = Have, [PC/Console] = Platform...</p>
+                            <div class="post-actions">
+                                <button onclick="viewPost(4)">View Discussion</button>
+                                <span class="category-tag">Trading Post</span>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Create New Post -->
+                <section class="forum-section">
+                    <h2>Start a New Discussion</h2>
+                    <div class="new-post-form">
+                        <form id="forumForm" onsubmit="submitPost(event)">
+                            <div class="form-group">
+                                <label for="username">Username:</label>
+                                <input type="text" id="username" name="username" required placeholder="Enter your username">
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="email">Email:</label>
+                                <input type="email" id="email" name="email" required placeholder="your.email@example.com">
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="category">Category:</label>
+                                <select id="category" name="category" required>
+                                    <option value="">Select a category</option>
+                                    <option value="general">General Discussion</option>
+                                    <option value="builds">Character Builds</option>
+                                    <option value="lore">Lore & Story</option>
+                                    <option value="tips">Tips & Guides</option>
+                                    <option value="trading">Trading Post</option>
+                                    <option value="bugs">Bug Reports</option>
+                                </select>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="title">Discussion Title:</label>
+                                <input type="text" id="title" name="title" required placeholder="Enter an engaging title for your discussion">
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="message">Message:</label>
+                                <textarea id="message" name="message" rows="8" required placeholder="Share your thoughts, questions, or insights with the community..."></textarea>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label>
+                                    <input type="checkbox" id="spoiler" name="spoiler">
+                                    This post contains spoilers
+                                </label>
+                            </div>
+                    
+                            <div class="form-group">
+                                <input type="submit" value="Create Discussion" class="submit-btn">
+                                <button type="button" onclick="previewPost()" class="preview-btn">Preview</button>
+                            </div>
+                        </form>
+                    </div>
+                </section>
+
+                <!-- Community Guidelines -->
+                <section class="forum-section">
+                    <h2>Community Guidelines</h2>
+                    <div class="guidelines">
+                        <div class="guideline-item">
+                            <h4>🛡️ Respect Others</h4>
+                            <p>Treat all community members with respect and courtesy.</p>
+                        </div>
+                        <div class="guideline-item">
+                            <h4>📝 Stay On Topic</h4>
+                            <p>Keep discussions relevant to Diablo IV and gaming.</p>
+                        </div>
+                        <div class="guideline-item">
+                            <h4>🚫 No Spoilers</h4>
+                            <p>Mark spoiler content appropriately and use spoiler tags.</p>
+                        </div>
+                        <div class="guideline-item">
+                            <h4>🔍 Search First</h4>
+                            <p>Check if your topic has been discussed before posting.</p>
+                        </div>
+                    </div>
+                </section>
+            </div>
+            <div class="col-1"></div>
+        </div>
+    </main>
+                               </div>
+               </form>
+               <br>
+            </div>
+            <div class="col-1"></div>
+
+        </div>
+        <div class="row">
+            <div class="col-1">
+
+            </div>
+         <div class="col-10" style="background-color: azure ;border: 2px solid blue;">
+            <div style="border: 5px solid red;">
+                <h2>Adam Smith</h2>
+                <p>Diablo IV returns with a darker, more sinister world than ever before, plunging players into an immersive and haunting narrative. With the return of the iconic classes and the introduction of new ones, players can harness a diverse range of powers to battle the forces of Hell. Explore a vast open world, filled with challenging dungeons, dynamic world events, and an ever-evolving story, making every playthrough a unique and thrilling experience.</p>
+                 <br><br>
+              </div>
+          <div style="border: 5px solid rgb(0, 0, 0);">
+            <h2  >Brian Stephenus</h2>
+            <p>Diablo IV redefines the hack-and-slash genre with its relentless combat, deep customization, and expansive open-world setting. Embrace the power of the Barbarian, Sorceress, Druid, and more, each offering unique abilities and playstyles to master. Delve into a grim and foreboding world, where the line between humanity and the demonic is ever-blurring, promising an epic and unforgettable journey into darkness.</p>
+             <br>
+          </div>
+         
+          <div style="border: 5px solid red;">
+            <h2  >Karabo Witboom</h2>
+            <p>Diablo IV transports players back to the foreboding realm of Sanctuary, where the eternal conflict between angels and demons rages on. With its stunning visuals and immersive storytelling, the game offers a visceral and chilling adventure from start to finish. Choose your hero, gather legendary gear, and face the horrors of Hell in an epic battle for the fate of the world.</p>
+             <br>
+             <h1>Interactive Map</h1>
+             <div>
+                <iframe src="https://mapgenie.io/diablo-4/maps/sanctuary?embed=light" height="500" style="position: relative; width: 100%;"></iframe>
+             </div>
+          </div>
+         </div>
+
+         <div class="col-1"></div>
+        </div>
+        <script>
+            function openPage() {
+                var x = document.getElementById("search").value;
+                if (x == "Diablo") {
+                    window.open("/portfolio.html");
+                }
+                if(x ==="characters"){
+                    window.open("/character.html");
+                }
+                if(x ==="about"){
+                    window.open("/index.html");
+                }
+                if(x ==="Elias"){
+                    window.open("/character.html");
+                }
+            }
+        </script>
+      
+    </main>
+
+    <footer>
+        <div class="footer-container">
+            <div class="footer-section">
+                <h2>Find us:</h2>
+               <img src="media/fb.png" alt="facebook"style="width: 30px;">
+               <img src="media/insta.png" alt="instagram"style="width: 30px;">
+               <img src="media/twitter.png" alt="twitter"style="width: 30px;">
+               <img src="media/yt.jpeg" alt="youtube"style="width: 40px;height:30px">
+            </div>
+            <div class="footer-section">
+                <h2>Quick Links</h2>
+                <ul id="foot">
+                    <li><a href="privacy.html">Privacy policy</a></li>
+                    <li><a href="portfolio.html">Portfolio</a></li>
+
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h2>Contact Us</h2>
+                <p>Email: diabloproductions@product.com</p>
+                <p>Phone: 015 638 2483</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; DiabloProductions. All Rights Reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>

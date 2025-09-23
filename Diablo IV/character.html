@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Diablo IV Characters - Legends of Sanctuary</title>
+    <link rel="stylesheet" href="styling.css">
+    <link rel="stylesheet" href="grid.css">
+    <script src="Javascript.js" type="text/javascript"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700;900&family=Cinzel:wght@400;500;600&display=swap" rel="stylesheet">
+    
+    <meta name="description" content="Explore the legendary characters of Diablo IV - their stories, powers, and role in the fate of Sanctuary.">
+</head>
+
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html" data-tooltip="Return to the main hub">Home</a></li>
+                <li><a href="portfolio.html" data-tooltip="View game galleries and content">Portfolio</a></li>
+                <li>
+                    <img src="https://th.bing.com/th/id/R.5cf23d257a499004a0e0d373117e8d82?rik=J6Z%2byDsYwdBrmw&pid=ImgRaw&r=0" 
+                         alt="Diablo IV Logo" 
+                         id="logo"
+                         data-tooltip="Diablo IV - The ultimate dark fantasy experience">
+                </li>
+                <li><a href="character.html" data-tooltip="Explore legendary characters">Characters</a></li>
+                <li><a href="forum.html" data-tooltip="Join the community">Forum</a></li>
+                <input type="text" 
+                       placeholder="Search characters..." 
+                       data-tooltip="Search for specific characters"
+                       onkeypress="if(event.key==='Enter') searchCharacters()">
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="content-section">
+            <h1 class="diablo">Legends of Sanctuary</h1>
+            <p class="subtitle">Meet the Heroes and Villains Who Shape Destiny</p>
+        </section>
+
+        <!-- Character Filter Section -->
+        <section class="filter-section">
+            <h3>Filter Characters</h3>
+            <div class="filter-buttons">
+                <button onclick="filterCharacters('all')" class="filter-btn active">All</button>
+                <button onclick="filterCharacters('heroes')" class="filter-btn">Heroes</button>
+                <button onclick="filterCharacters('villains')" class="filter-btn">Villains</button>
+                <button onclick="filterCharacters('angels')" class="filter-btn">Angels</button>
+                <button onclick="filterCharacters('demons')" class="filter-btn">Demons</button>
+            </div>
+        </section>
+
+        <div class="row">
+            <div class="col-1"></div>
+            <div class="col-10">
+                <!-- Enhanced Character Cards -->
+                <div class="character-grid">
+                    <!-- Elias - The Pale Man -->
+                    <div class="flip-card villains demons" data-character="elias">
+                        <div class="flip-card-inner">
+                            <div class="flip-card-front">
+                                <img src="media/Elias(The Pale Man).jpg" alt="Elias - The Pale Man" class="reflex">
+                                <div class="character-name-overlay">
+                                    <h3>Elias</h3>
+                                    <p>The Pale Man</p>
+                                </div>
+                            </div>
+                            <div class="flip-card-back">
+                                <h2>Elias</h2>
+                                <div class="character-bio">
+                                    <p><strong>Role:</strong> Antagonist</p>
+                                    <p><strong>Type:</strong> Human Sorcerer</p>
+                                    <p><strong>Background:</strong> Once a scholar, Elias delved too deep into forbidden magic and became corrupted by dark forces.</p>
+                                    <p><strong>Combat Tips:</strong> Watch out for his ranged attacks and trap him in place when possible. His first attack shoots towards the player's location.</p>
+                                </div>
+                                <button onclick="showCharacterModal('elias')" class="learn-more-btn">Learn More</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Inarius -->
+                    <div class="flip-card angels heroes" data-character="inarius">
+                        <div class="flip-card-inner">
+                            <div class="flip-card-front">
+                                <img src="media/Inarius.jpg" alt="Inarius - Fallen Angel" class="reflex">
+                                <div class="character-name-overlay">
+                                    <h3>Inarius</h3>
+                                    <p>Fallen Angel</p>
+                                </div>
+                            </div>
+                            <div class="flip-card-back">
+                                <h2>Inarius</h2>
+                                <div class="character-bio">
+                                    <p><strong>Role:</strong> Tragic Hero</p>
+                                    <p><strong>Type:</strong> Archangel</p>
+                                    <p><strong>Background:</strong> Co-creator of Sanctuary with Lilith, now imprisoned and tortured in Hell for eternity.</p>
+                                    <p><strong>Significance:</strong> Central figure in Diablo IV's lore, representing the eternal struggle between Heaven and Hell.</p>
+                                </div>
+                                <button onclick="showCharacterModal('inarius')" class="learn-more-btn">Learn More</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Lilith -->
+                    <div class="flip-card demons villains" data-character="lilith">
+                        <div class="flip-card-inner">
+                            <div class="flip-card-front">
+                                <img src="media/Lilith.jpg" alt="Lilith - Daughter of Hatred" class="reflex">
+                                <div class="character-name-overlay">
+                                    <h3>Lilith</h3>
+                                    <p>Daughter of Hatred</p>
+                                </div>
+                            </div>
+                            <div class="flip-card-back">
+                                <h2>Lilith</h2>
+                                <div class="character-bio">
+                                    <p><strong>Role:</strong> Primary Antagonist</p>
+                                    <p><strong>Type:</strong> Lesser Evil/Demon</p>
+                                    <p><strong>Background:</strong> Daughter of Mephisto, mother of all Nephalem, and co-creator of Sanctuary.</p>
+                                    <p><strong>Goal:</strong> Reclaim Sanctuary and reshape it according to her vision, free from both Heaven and Hell's influence.</p>
+                                </div>
+                                <button onclick="showCharacterModal('lilith')" class="learn-more-btn">Learn More</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Lorath Nahr -->
+                    <div class="flip-card heroes" data-character="lorath">
+                        <div class="flip-card-inner">
+                            <div class="flip-card-front">
+                                <img src="media/Lorath Narh.jpg" alt="Lorath Nahr - The Last Horadrim" class="reflex">
+                                <div class="character-name-overlay">
+                                    <h3>Lorath Nahr</h3>
+                                    <p>The Last Horadrim</p>
+                                </div>
+                            </div>
+                            <div class="flip-card-back">
+                                <h2>Lorath Nahr</h2>
+                                <div class="character-bio">
+                                    <p><strong>Role:</strong> Ally/Mentor</p>
+                                    <p><strong>Type:</strong> Human Scholar</p>
+                                    <p><strong>Background:</strong> Last surviving member of the Horadrim, keeper of ancient knowledge and lore.</p>
+                                    <p><strong>Mission:</strong> Guide the player and preserve the ancient knowledge needed to combat the forces of evil.</p>
+                                </div>
+                                <button onclick="showCharacterModal('lorath')" class="learn-more-btn">Learn More</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Additional Character Information Section -->
+                <section class="content-section">
+                    <h2>The World of Sanctuary</h2>
+                    <p>In Diablo IV, the fate of Sanctuary hangs in the balance as ancient powers clash once more. Each character plays a crucial role in this dark tapestry of fate, bringing their own motivations, powers, and secrets to the eternal struggle between light and darkness.</p>
+                    
+                    <div class="lore-section">
+                        <h3>Character Classes</h3>
+                        <div class="class-grid">
+                            <div class="class-card">
+                                <h4>Barbarian</h4>
+                                <p>Master of melee combat and primal fury</p>
+                            </div>
+                            <div class="class-card">
+                                <h4>Sorceress</h4>
+                                <p>Wielder of elemental magic and arcane power</p>
+                            </div>
+                            <div class="class-card">
+                                <h4>Druid</h4>
+                                <p>Shape-shifter connected to nature's fury</p>
+                            </div>
+                            <div class="class-card">
+                                <h4>Rogue</h4>
+                                <p>Swift assassin with deadly precision</p>
+                            </div>
+                            <div class="class-card">
+                                <h4>Necromancer</h4>
+                                <p>Commander of death and the undead</p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+            <div class="col-1"></div>
+        </div>
+    </main>
+                    </div>
+                  </div>
+                  <!--third flip-->
+                  <div class="flip-card">
+                    <div class="flip-card-inner">
+                      <div class="flip-card-front">
+                        <img src="media/Lorath Narh.jpg" alt="Lorath Narh"class="reflex">
+                      </div>
+                      <div class="flip-card-back">
+                        <h1>Lorath Narh</h1>
+                        <p>After the events of Diablo III, Lorath went on to be a foremost member of the renewed Horadric Order. Lorath’s greatest success as a Horadrim member was compiling a tome describing all of Sanctuary’s most powerful relics and their stories. Despite Tyrael and Lorath’s hard work, though, the Horadrim’s numbers helplessly dwindled over the decades. By the time you meet Lorath Nahr in Diablo IV, he’s but a lonely, aged hermit in a shack, and one of the few Horadrim members left in the entire world of Sanctuary</p>
+                      </div>
+                    </div>
+                  </div>
+                  <!--fourth flip-->
+                  <div class="flip-card">
+                    <div class="flip-card-inner">
+                      <div class="flip-card-front">
+                        <img src="media/Lilith.jpg" alt="Lilith" class="reflex">
+                      </div>
+                      <div class="flip-card-back">
+                        <h1>Lilith</h1>
+                        <p>Lilith is the daughter of Mephisto, former lover of Inarius, creator of Sanctuary, and mother of all Nephalem in Diablo 4 (D4). Read on to learn more about Lilith, what she has done in the past, and what her role is expected to be in the new story of Diablo 4 </p>
+                      </div>
+                    </div>
+                  </div>
+
+
+             
+            </div>
+            <div class="col-1">
+        
+            </div>
+        </div>
+     
+        
+    </main>
+    <script>
+      function openPage() {
+          var x = document.getElementById("search").value;
+          if (x == "Diablo") {
+              window.open("/portfolio.html");
+          }
+          if(x ==="characters"){
+              window.open("/character.html");
+          }
+          if(x ==="about"){
+              window.open("/index.html");
+          }
+          if(x ==="Elias"){
+              window.open("/character.html");
+          }
+      }
+  </script>
+        <footer>
+          <div class="footer-container">
+              <div class="footer-section">
+                  <h2>Find us:</h2>
+                  <a href="https://www.facebook.com" target="_blank">
+                    <img src="media/fb.png" alt="facebook" style="width: 30px;">
+                </a>
+                
+                <a href="https://www.instagram.com" target="_blank">
+                    <img src="media/insta.png" alt="instagram" style="width: 30px;">
+                </a>
+                
+                <a href="https://www.twitter.com" target="_blank">
+                    <img src="media/twitter.png" alt="twitter" style="width: 30px;">
+                </a>
+                
+                <a href="https://www.youtube.com" target="_blank">
+                    <img src="media/yt.jpeg" alt="youtube" style="width: 40px; height: 30px;">
+                </a>
+                
+              </div>
+              <div class="footer-section">
+                  <h2>Quick Links</h2>
+                  <ul id="foot">
+                      <li><a href="privacy.html">Privacy policy</a></li>
+                      <li><a href="portfolio.html">Portfolio</a></li>
+
+                  </ul>
+              </div>
+              <div class="footer-section">
+                  <h2>Contact Us</h2>
+                  <p>Email: diabloproductions@product.com</p>
+                  <p>Phone: 015 638 2483</p>
+              </div>
+          </div>
+          <div class="footer-bottom">
+              <p>&copy; DiabloProductions. All Rights Reserved.</p>
+          </div>
+      </footer>
+</body>
+</html>
