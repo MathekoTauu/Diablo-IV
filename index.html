@@ -1,0 +1,450 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Diablo IV - Interactive Portfolio</title>
+    <link rel="stylesheet" href="styling.css">
+    <link rel="stylesheet" href="grid.css">
+    <script src="Javascript.js" type="text/javascript"></script>
+    
+    <!-- Enhanced Google Fonts for dark fantasy aesthetic -->
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700;900&family=Cinzel:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    
+    <!-- Meta tags for better SEO -->
+    <meta name="description" content="Interactive Diablo IV Portfolio - Explore the dark fantasy world of Sanctuary with character guides, lore, and immersive content.">
+    <meta name="keywords" content="Diablo IV, Diablo 4, Sanctuary, RPG, Dark Fantasy, Characters, Lore">
+    <meta name="author" content="Diablo Productions">
+    
+    <!-- Open Graph for social sharing -->
+    <meta property="og:title" content="Diablo IV - Interactive Portfolio">
+    <meta property="og:description" content="Immerse yourself in the dark world of Sanctuary">
+    <meta property="og:type" content="website">
+    
+    <link rel="icon" type="image/x-icon" href="media/favicon.ico">
+</head>
+
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html" data-tooltip="Return to the main hub">Home</a></li>
+                <li><a href="portfolio.html" data-tooltip="View game galleries and content">Portfolio</a></li>
+                <li>
+                    <img src="https://th.bing.com/th/id/R.5cf23d257a499004a0e0d373117e8d82?rik=J6Z%2byDsYwdBrmw&pid=ImgRaw&r=0" 
+                         alt="Diablo IV Logo" 
+                         id="logo"
+                         data-tooltip="Diablo IV - The ultimate dark fantasy experience">
+                </li>
+                <li><a href="character.html" data-tooltip="Explore legendary characters and their stories">Characters</a></li>
+                <li><a href="forum.html" data-tooltip="Join the community discussion">Forum</a></li>
+                <input type="text" 
+                       placeholder="Search the depths of Sanctuary..." 
+                       data-tooltip="Search for characters, lore, or content"
+                       onkeypress="if(event.key==='Enter') openPage()">
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <div class="row">
+            <div class="col-1"></div>
+            <div class="col-10 content-section">
+                <h1 class="diablo">DIABLO IV</h1>
+                <p class="subtitle">Enter the World of Sanctuary</p>
+                
+                <!-- Enhanced video section -->
+                <div class="video-container">
+                    <video width="70%" height="50%" controls poster="media/video-thumbnail.jpg">
+                        <source src="media/video.mp4" type="video/mp4">
+                        <source src="media/video.webm" type="video/webm">
+                        <source src="media/video.ogg" type="video/ogg">
+                        Your browser does not support the video tag.
+                    </video>
+                </div>
+
+                <!-- Interactive content sections -->
+                <section class="content-section fade-in-up">
+                    <h1>Welcome to Sanctuary</h1>
+                    <p>Welcome to the ultimate hub for Diablo IV fans! This website is dedicated to providing you with the latest news, guides, and resources for Blizzard's highly anticipated action role-playing game, Diablo IV.</p>
+                    
+                    <p>Immerse yourself in the dark and gritty world of Sanctuary as you explore our comprehensive database of character builds, item rankings, and gameplay strategies. Whether you're a seasoned veteran or a newcomer to the franchise, our team of passionate Diablo enthusiasts is here to ensure you have the knowledge and tools to conquer the forces of the Burning Hells.</p>
+                    
+                    <p>Stay up-to-date with the latest developments, patch notes, and community events through our regularly updated news section. Join our vibrant forums to connect with fellow players, share your experiences, and engage in lively discussions about all things Diablo IV.</p>
+                    
+                    <p>Our mission is to provide you with a one-stop destination for everything related to this epic adventure. Prepare to delve into the depths of Sanctuary, uncover ancient secrets, and battle the minions of the Lord of Terror like never before.</p>
+                </section>
+
+                <!-- Interactive features showcase -->
+                <section class="features-grid">
+                    <div class="feature-card" data-tooltip="Discover legendary heroes and villains">
+                        <h3>Characters</h3>
+                        <p>Explore the rich lore and backgrounds of Diablo IV's most iconic characters.</p>
+                        <button onclick="window.location.href='character.html'">Explore Characters</button>
+                    </div>
+                    
+                    <div class="feature-card" data-tooltip="View stunning artwork and gameplay">
+                        <h3>Portfolio</h3>
+                        <p>Experience the visual journey through concept art, screenshots, and trailers.</p>
+                        <button onclick="window.location.href='portfolio.html'">View Portfolio</button>
+                    </div>
+                    
+                    <div class="feature-card" data-tooltip="Connect with the community">
+                        <h3>Community</h3>
+                        <p>Join discussions, share strategies, and connect with fellow players.</p>
+                        <button onclick="window.location.href='forum.html'">Join Forum</button>
+                    </div>
+                </section>
+
+                <!-- Quick stats or highlights -->
+                <section class="stats-section">
+                    <div class="stat-item">
+                        <h3>5</h3>
+                        <p>Character Classes</p>
+                    </div>
+                    <div class="stat-item">
+                        <h3>∞</h3>
+                        <p>Adventure Awaits</p>
+                    </div>
+                    <div class="stat-item">
+                        <h3>666</h3>
+                        <p>Demons to Slay</p>
+                    </div>
+                </section>
+            </div>
+            <div class="col-1"></div>
+        </div>
+    </main>
+
+    <!-- Official Resources Section -->
+    <section class="official-resources" id="resources">
+        <div class="container">
+            <h2 class="section-title">Official Diablo IV Resources</h2>
+            <div class="resources-grid">
+                <div class="resource-card">
+                    <div class="resource-icon">🎨</div>
+                    <h3>Concept Art Gallery</h3>
+                    <p>Explore the stunning official concept art showcasing the dark fantasy world of Sanctuary.</p>
+                    <div class="resource-links">
+                        <a href="#concept-art" class="resource-link">View Gallery</a>
+                        <a href="https://diablo4.blizzard.com" class="external-link" target="_blank">Official Site</a>
+                    </div>
+                </div>
+                <div class="resource-card">
+                    <div class="resource-icon">🎬</div>
+                    <h3>Developer Insights</h3>
+                    <p>Behind-the-scenes content from the development team, including interviews and making-of videos.</p>
+                    <div class="resource-links">
+                        <a href="#developer-content" class="resource-link">Watch Videos</a>
+                        <a href="https://news.blizzard.com/diablo4" class="external-link" target="_blank">Developer Blog</a>
+                    </div>
+                </div>
+                <div class="resource-card">
+                    <div class="resource-icon">📚</div>
+                    <h3>Lore & Storyline</h3>
+                    <p>Dive deep into the rich lore and storyline of Diablo IV's dark fantasy universe.</p>
+                    <div class="resource-links">
+                        <a href="#lore-section" class="resource-link">Explore Lore</a>
+                        <a href="https://us.diablo3.com/game/lore" class="external-link" target="_blank">Official Lore</a>
+                    </div>
+                </div>
+                <div class="resource-card">
+                    <div class="resource-icon">🎮</div>
+                    <h3>Gameplay Trailers</h3>
+                    <p>Watch official gameplay trailers, cinematics, and announcement videos.</p>
+                    <div class="resource-links">
+                        <a href="#trailers" class="resource-link">Watch Trailers</a>
+                        <a href="https://www.youtube.com/blizzardentertainment" class="external-link" target="_blank">YouTube</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Community Content Section -->
+    <section class="community-content" id="community">
+        <div class="container">
+            <h2 class="section-title">Community Showcase</h2>
+            <div class="community-tabs">
+                <button class="tab-btn active" data-tab="fan-art">Fan Art</button>
+                <button class="tab-btn" data-tab="discussions">Discussions</button>
+                <button class="tab-btn" data-tab="guides">Guides</button>
+                <button class="tab-btn" data-tab="news">News</button>
+            </div>
+            
+            <div class="tab-content active" id="fan-art">
+                <div class="fan-art-gallery">
+                    <div class="art-piece">
+                        <img src="media/1.jpg" alt="Fan Art - Lilith" class="art-image">
+                        <div class="art-overlay">
+                            <h4>Lilith: Mother of Sanctuary</h4>
+                            <p>Artist: Community Creator</p>
+                            <div class="art-actions">
+                                <button class="like-art">❤️ 245</button>
+                                <button class="share-art">🔗 Share</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="art-piece">
+                        <img src="media/2.jpg" alt="Fan Art - Barbarian" class="art-image">
+                        <div class="art-overlay">
+                            <h4>Barbarian Warrior</h4>
+                            <p>Artist: Community Creator</p>
+                            <div class="art-actions">
+                                <button class="like-art">❤️ 189</button>
+                                <button class="share-art">🔗 Share</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="art-piece">
+                        <img src="media/3.jpeg" alt="Fan Art - Sanctuary" class="art-image">
+                        <div class="art-overlay">
+                            <h4>Dark Sanctuary</h4>
+                            <p>Artist: Community Creator</p>
+                            <div class="art-actions">
+                                <button class="like-art">❤️ 312</button>
+                                <button class="share-art">🔗 Share</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="tab-content" id="discussions">
+                <div class="discussion-feed">
+                    <div class="discussion-item">
+                        <div class="discussion-avatar">👤</div>
+                        <div class="discussion-content">
+                            <h4>Best Build Strategies for Season 2</h4>
+                            <p>Community discussion on optimal character builds and strategies...</p>
+                            <div class="discussion-meta">
+                                <span>r/Diablo • 2 hours ago • 156 comments</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="discussion-item">
+                        <div class="discussion-avatar">👤</div>
+                        <div class="discussion-content">
+                            <h4>Lore Analysis: The Return of Lilith</h4>
+                            <p>Deep dive into the implications of Lilith's return to Sanctuary...</p>
+                            <div class="discussion-meta">
+                                <span>Diablo4.com Forums • 4 hours ago • 89 comments</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="tab-content" id="guides">
+                <div class="guides-grid">
+                    <div class="guide-card">
+                        <h4>Beginner's Guide to Diablo IV</h4>
+                        <p>Everything new players need to know to start their journey in Sanctuary.</p>
+                        <div class="guide-meta">
+                            <span>📖 15 min read</span>
+                            <span>⭐ 4.9/5</span>
+                        </div>
+                    </div>
+                    <div class="guide-card">
+                        <h4>Class Comparison & Selection</h4>
+                        <p>Detailed breakdown of each class to help you choose your perfect playstyle.</p>
+                        <div class="guide-meta">
+                            <span>📖 12 min read</span>
+                            <span>⭐ 4.7/5</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="tab-content" id="news">
+                <div class="news-feed">
+                    <div class="news-item">
+                        <div class="news-date">Sep 20, 2025</div>
+                        <h4>Season 3 Announcement: The Eternal Conflict</h4>
+                        <p>Blizzard reveals details about the upcoming season featuring new endgame content...</p>
+                    </div>
+                    <div class="news-item">
+                        <div class="news-date">Sep 18, 2025</div>
+                        <h4>Developer Update: Quality of Life Improvements</h4>
+                        <p>Latest patch brings significant improvements to inventory management and UI...</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Interactive Lore Section -->
+    <section class="lore-explorer" id="lore-section">
+        <div class="container">
+            <h2 class="section-title">Explore the Lore of Sanctuary</h2>
+            <div class="lore-timeline">
+                <div class="timeline-item" data-era="creation">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content">
+                        <h3>The Creation of Sanctuary</h3>
+                        <p>Discover how the world of Sanctuary was born from the union of Angel and Demon.</p>
+                        <button class="explore-btn" onclick="openLoreModal('creation')">Explore Era</button>
+                    </div>
+                </div>
+                <div class="timeline-item" data-era="sin-war">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content">
+                        <h3>The Sin War</h3>
+                        <p>The eternal conflict between Heaven and Hell comes to Sanctuary.</p>
+                        <button class="explore-btn" onclick="openLoreModal('sin-war')">Explore Era</button>
+                    </div>
+                </div>
+                <div class="timeline-item" data-era="dark-exile">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content">
+                        <h3>The Dark Exile</h3>
+                        <p>The Prime Evils are banished to Sanctuary, setting the stage for future conflicts.</p>
+                        <button class="explore-btn" onclick="openLoreModal('dark-exile')">Explore Era</button>
+                    </div>
+                </div>
+                <div class="timeline-item" data-era="return">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content">
+                        <h3>Lilith's Return</h3>
+                        <p>The Mother of Sanctuary returns to reclaim her domain in Diablo IV.</p>
+                        <button class="explore-btn" onclick="openLoreModal('return')">Explore Era</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Enhanced Footer with better styling and social media integration -->
+    <footer>
+        <div class="footer-container">
+            <div class="footer-section">
+                <h2>Connect with Us</h2>
+                <div class="social-links">
+                    <a href="#" data-tooltip="Follow us on Facebook">
+                        <img src="media/fb.png" alt="Facebook" class="footer-img">
+                    </a>
+                    <a href="#" data-tooltip="Follow us on Instagram">
+                        <img src="media/insta.png" alt="Instagram" class="footer-img">
+                    </a>
+                    <a href="#" data-tooltip="Follow us on Twitter">
+                        <img src="media/twitter.png" alt="Twitter" class="footer-img">
+                    </a>
+                    <a href="#" data-tooltip="Subscribe to our YouTube">
+                        <img src="media/yt.jpeg" alt="YouTube" class="footer-img">
+                    </a>
+                </div>
+            </div>
+            
+            <div class="footer-section">
+                <h2>Quick Links</h2>
+                <ul id="foot">
+                    <li><a href="privacy.html">Privacy Policy</a></li>
+                    <li><a href="portfolio.html">Portfolio</a></li>
+                    <li><a href="character.html">Characters</a></li>
+                    <li><a href="forum.html">Community</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-section">
+                <h2>Contact Information</h2>
+                <p>📧 Email: diabloproductions@product.com</p>
+                <p>📞 Phone: 015 638 2483</p>
+                <p>🌍 Web: www.diabloiv-portfolio.com</p>
+            </div>
+        </div>
+        
+        <div class="footer-bottom">
+            <p>&copy; 2024 DiabloProductions. All Rights Reserved. | Diablo IV &copy; Blizzard Entertainment</p>
+        </div>
+    </footer>
+
+    <!-- Enhanced search functionality script -->
+    <script>
+        // Enhanced search functionality
+        function searchContent() {
+            const searchTerm = document.querySelector('input[type="text"]').value.toLowerCase();
+            
+            if (searchTerm) {
+                if (searchTerm.includes("diablo") || searchTerm.includes("portfolio") || searchTerm.includes("gallery")) {
+                    window.location.href = "portfolio.html";
+                } else if (searchTerm.includes("character") || searchTerm.includes("elias") || searchTerm.includes("inarius") || searchTerm.includes("lilith")) {
+                    window.location.href = "character.html";
+                } else if (searchTerm.includes("about") || searchTerm.includes("home")) {
+                    window.location.href = "index.html";
+                } else if (searchTerm.includes("forum") || searchTerm.includes("community") || searchTerm.includes("discussion")) {
+                    window.location.href = "forum.html";
+                } else {
+                    // Show search suggestions modal
+                    showSearchModal(searchTerm);
+                }
+            }
+        }
+        
+        function showSearchModal(term) {
+            const modal = document.createElement('div');
+            modal.style.cssText = `
+                position: fixed;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                background: rgba(0, 0, 0, 0.8);
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                z-index: 1000;
+            `;
+            
+            modal.innerHTML = `
+                <div style="
+                    background: linear-gradient(135deg, var(--diablo-gray), var(--diablo-black));
+                    border: 3px solid var(--diablo-red);
+                    border-radius: 15px;
+                    padding: 30px;
+                    text-align: center;
+                    color: var(--diablo-gold);
+                    max-width: 400px;
+                ">
+                    <h3>Search Results for "${term}"</h3>
+                    <p>No exact matches found. Try searching for:</p>
+                    <ul style="list-style: none; padding: 0;">
+                        <li><a href="character.html" style="color: var(--diablo-gold);">Characters</a></li>
+                        <li><a href="portfolio.html" style="color: var(--diablo-gold);">Portfolio</a></li>
+                        <li><a href="forum.html" style="color: var(--diablo-gold);">Forum</a></li>
+                    </ul>
+                    <button onclick="this.parentElement.parentElement.remove()" style="
+                        background: var(--diablo-red);
+                        color: var(--diablo-gold);
+                        border: none;
+                        padding: 10px 20px;
+                        border-radius: 5px;
+                        cursor: pointer;
+                        margin-top: 15px;
+                    ">Close</button>
+                </div>
+            `;
+            
+            document.body.appendChild(modal);
+        }
+        
+        // Smooth scrolling for internal links
+        document.addEventListener('DOMContentLoaded', function() {
+            const links = document.querySelectorAll('a[href^="#"]');
+            links.forEach(link => {
+                link.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    const target = document.querySelector(this.getAttribute('href'));
+                    if (target) {
+                        target.scrollIntoView({
+                            behavior: 'smooth',
+                            block: 'start'
+                        });
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>

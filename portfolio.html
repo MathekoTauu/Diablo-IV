@@ -1,0 +1,516 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Diablo IV Portfolio - Visual Journey</title>
+    <link rel="stylesheet" href="styling.css">
+    <link rel="stylesheet" href="grid.css">
+    <script src="Javascript.js" type="text/javascript"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700;900&family=Cinzel:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    
+    <meta name="description" content="Explore the visual journey of the Diablo franchise through stunning artwork, screenshots, and concept designs.">
+</head>
+
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html" data-tooltip="Return to the main hub">Home</a></li>
+                <li><a href="portfolio.html" data-tooltip="View game galleries and content">Portfolio</a></li>
+                <li>
+                    <img src="https://th.bing.com/th/id/R.5cf23d257a499004a0e0d373117e8d82?rik=J6Z%2byDsYwdBrmw&pid=ImgRaw&r=0" 
+                         alt="Diablo IV Logo" 
+                         id="logo"
+                         data-tooltip="Diablo IV - The ultimate dark fantasy experience">
+                </li>
+                <li><a href="character.html" data-tooltip="Explore legendary characters">Characters</a></li>
+                <li><a href="forum.html" data-tooltip="Join the community">Forum</a></li>
+                <input type="text" 
+                       placeholder="Search the collection..." 
+                       data-tooltip="Search for specific content"
+                       onkeypress="if(event.key==='Enter') openPage()">
+            </ul>
+        </nav>
+    </header>
+
+    <main id="sliderbg">
+        <section class="content-section">
+            <h1 class="diablo">Visual Portfolio</h1>
+            <p class="subtitle">Journey Through the Evolution of Diablo</p>
+        </section>
+
+        <!-- Enhanced Image Slider -->
+        <div class="slider-container">
+            <!-- Slide 1 -->
+            <div class="MySlide active">
+                <img src="media/1.jpg" alt="Diablo I - The Beginning" class="Image">
+                <div class="number">
+                    <h1>1/4</h1>
+                </div>
+                <div class="caption">
+                    <h1>DIABLO I</h1>
+                    <p>Where the nightmare began - The original descent into the depths of evil</p>
+                </div>
+            </div>
+
+            <!-- Slide 2 -->
+            <div class="MySlide">
+                <img src="media/2.jpg" alt="Diablo II - Lord of Destruction" class="Image">
+                <div class="number">
+                    <h1>2/4</h1>
+                </div>
+                <div class="caption">
+                    <h1>DIABLO II</h1>
+                    <p>The hunt for the Dark Wanderer continues across Sanctuary</p>
+                </div>
+            </div>
+
+            <!-- Slide 3 -->
+            <div class="MySlide">
+                <img src="media/3.jpeg" alt="Diablo III - Reaper of Souls" class="Image">
+                <div class="number">
+                    <h1>3/4</h1>
+                </div>
+                <div class="caption">
+                    <h1>DIABLO III</h1>
+                    <p>Angels and demons clash in the ultimate battle for humanity</p>
+                </div>
+            </div>
+
+            <!-- Slide 4 -->
+            <div class="MySlide">
+                <img src="media/4.jpg" alt="Diablo IV - Return to Darkness" class="Image">
+                <div class="number">
+                    <h1>4/4</h1>
+                </div>
+                <div class="caption">
+                    <h1>DIABLO IV</h1>
+                    <p>Lilith returns to reclaim Sanctuary in this darker, grittier chapter</p>
+                </div>
+            </div>
+
+            <!-- Navigation arrows -->
+            <a class="Prev" onclick="NextSlide(-1)" data-tooltip="Previous image">&#10094;</a>
+            <a class="Next" onclick="NextSlide(1)" data-tooltip="Next image">&#10095;</a>
+        </div>
+
+        <!-- Dots indicator -->
+        <div class="dots-container">
+            <span class="dot active" onclick="CurrentSlide(1)" data-tooltip="Diablo I"></span>
+            <span class="dot" onclick="CurrentSlide(2)" data-tooltip="Diablo II"></span>
+            <span class="dot" onclick="CurrentSlide(3)" data-tooltip="Diablo III"></span>
+            <span class="dot" onclick="CurrentSlide(4)" data-tooltip="Diablo IV"></span>
+        </div>
+
+        <!-- Interactive Gallery Grid -->
+        <section class="content-section">
+            <h2>Character Gallery</h2>
+            <div class="gallery-grid">
+                <div class="gallery-item" data-tooltip="Click to view larger">
+                    <img src="media/Elias(The Pale Man).jpg" alt="Elias - The Pale Man">
+                    <div class="gallery-overlay">
+                        <h3>Elias</h3>
+                        <p>The Pale Man - A former scholar turned dark sorcerer</p>
+                    </div>
+                </div>
+
+                <div class="gallery-item" data-tooltip="Click to view larger">
+                    <img src="media/Inarius.jpg" alt="Inarius - The Fallen Angel">
+                    <div class="gallery-overlay">
+                        <h3>Inarius</h3>
+                        <p>Fallen Angel - Co-creator of Sanctuary, now imprisoned</p>
+                    </div>
+                </div>
+
+                <div class="gallery-item" data-tooltip="Click to view larger">
+                    <img src="media/Lilith.jpg" alt="Lilith - Daughter of Hatred">
+                    <div class="gallery-overlay">
+                        <h3>Lilith</h3>
+                        <p>Daughter of Hatred - Mother of all Nephalem</p>
+                    </div>
+                </div>
+
+                <div class="gallery-item" data-tooltip="Click to view larger">
+                    <img src="media/Lorath Narh.jpg" alt="Lorath Nahr - The Last Horadrim">
+                    <div class="gallery-overlay">
+                        <h3>Lorath Nahr</h3>
+                        <p>The Last Horadrim - Keeper of ancient knowledge</p>
+                    </div>
+                </div>
+
+                <div class="gallery-item" data-tooltip="Click to view larger">
+                    <img src="media/5.webp" alt="Diablo IV Artwork">
+                    <div class="gallery-overlay">
+                        <h3>Concept Art</h3>
+                        <p>Official concept artwork showcasing the dark aesthetic</p>
+                    </div>
+                </div>
+
+                <div class="gallery-item" data-tooltip="Click to view larger">
+                    <img src="media/background.jpg" alt="Sanctuary Landscape">
+                    <div class="gallery-overlay">
+                        <h3>Sanctuary</h3>
+                        <p>The world between Heaven and Hell</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Official Concept Art Section -->
+        <section class="concept-art-section" id="concept-art">
+            <div class="container">
+                <h2 class="section-title">Official Concept Art</h2>
+                <p class="section-subtitle">Explore the stunning official artwork that brought Sanctuary to life</p>
+                
+                <div class="concept-categories">
+                    <button class="concept-filter active" data-category="all">All Artwork</button>
+                    <button class="concept-filter" data-category="characters">Characters</button>
+                    <button class="concept-filter" data-category="environments">Environments</button>
+                    <button class="concept-filter" data-category="demons">Demons & Angels</button>
+                </div>
+                
+                <div class="concept-gallery">
+                    <div class="concept-item characters">
+                        <div class="concept-image-container">
+                            <img src="media/Lilith.jpg" alt="Lilith Concept Art" class="concept-image">
+                            <div class="concept-overlay">
+                                <h4>Lilith - Mother of Sanctuary</h4>
+                                <p>The primary antagonist of Diablo IV, depicted in her full demonic glory</p>
+                                <div class="concept-details">
+                                    <span class="concept-artist">Artist: Blizzard Entertainment</span>
+                                    <span class="concept-year">Year: 2023</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="concept-item characters">
+                        <div class="concept-image-container">
+                            <img src="media/Inarius.jpg" alt="Inarius Concept Art" class="concept-image">
+                            <div class="concept-overlay">
+                                <h4>Inarius - The Fallen Angel</h4>
+                                <p>The angel who helped create Sanctuary alongside Lilith</p>
+                                <div class="concept-details">
+                                    <span class="concept-artist">Artist: Blizzard Entertainment</span>
+                                    <span class="concept-year">Year: 2023</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="concept-item characters">
+                        <div class="concept-image-container">
+                            <img src="media/Lorath Narh.jpg" alt="Lorath Concept Art" class="concept-image">
+                            <div class="concept-overlay">
+                                <h4>Lorath Nahr - The Scholar</h4>
+                                <p>Former member of the Horadrim and key ally in Diablo IV</p>
+                                <div class="concept-details">
+                                    <span class="concept-artist">Artist: Blizzard Entertainment</span>
+                                    <span class="concept-year">Year: 2023</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="concept-item environments">
+                        <div class="concept-image-container">
+                            <img src="media/background.jpg" alt="Sanctuary Environment" class="concept-image">
+                            <div class="concept-overlay">
+                                <h4>Sanctuary Landscape</h4>
+                                <p>The dark and foreboding world where angels and demons clash</p>
+                                <div class="concept-details">
+                                    <span class="concept-artist">Artist: Blizzard Entertainment</span>
+                                    <span class="concept-year">Year: 2023</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="concept-item characters environments">
+                        <div class="concept-image-container">
+                            <img src="media/1.jpg" alt="Character in Environment" class="concept-image">
+                            <div class="concept-overlay">
+                                <h4>Heroes of Sanctuary</h4>
+                                <p>Brave adventurers ready to face the darkness of Diablo IV</p>
+                                <div class="concept-details">
+                                    <span class="concept-artist">Artist: Blizzard Entertainment</span>
+                                    <span class="concept-year">Year: 2023</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="concept-item demons">
+                        <div class="concept-image-container">
+                            <img src="media/Elias(The Pale Man).jpg" alt="Demon Concept" class="concept-image">
+                            <div class="concept-overlay">
+                                <h4>Elias - The Pale Man</h4>
+                                <p>A key antagonist whose pale visage strikes fear into the hearts of mortals</p>
+                                <div class="concept-details">
+                                    <span class="concept-artist">Artist: Blizzard Entertainment</span>
+                                    <span class="concept-year">Year: 2023</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Developer Commentary Section -->
+        <section class="developer-commentary" id="developer-content">
+            <div class="container">
+                <h2 class="section-title">Developer Commentary</h2>
+                <div class="commentary-grid">
+                    <div class="commentary-card">
+                        <div class="commentary-icon">🎨</div>
+                        <h3>Art Direction</h3>
+                        <blockquote>
+                            "We wanted to return to the darker, grittier aesthetic of the original Diablo while leveraging modern technology to create truly immersive environments."
+                        </blockquote>
+                        <cite>- Lead Art Director, Blizzard Entertainment</cite>
+                    </div>
+                    
+                    <div class="commentary-card">
+                        <div class="commentary-icon">⚔️</div>
+                        <h3>Combat Design</h3>
+                        <blockquote>
+                            "The combat system in Diablo IV focuses on visceral, impactful gameplay that makes every ability feel powerful and satisfying to use."
+                        </blockquote>
+                        <cite>- Combat Design Lead, Blizzard Entertainment</cite>
+                    </div>
+                    
+                    <div class="commentary-card">
+                        <div class="commentary-icon">📖</div>
+                        <h3>Narrative Design</h3>
+                        <blockquote>
+                            "Lilith's return represents a new chapter in the Diablo saga, exploring themes of family, sacrifice, and the price of power."
+                        </blockquote>
+                        <cite>- Lead Writer, Blizzard Entertainment</cite>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Fan Community Spotlight -->
+        <section class="community-spotlight">
+            <div class="container">
+                <h2 class="section-title">Community Creations</h2>
+                <p class="section-subtitle">Celebrating the incredible talent of the Diablo IV community</p>
+                
+                <div class="community-showcase">
+                    <div class="showcase-item">
+                        <img src="media/2.jpg" alt="Fan Art 1" class="showcase-image">
+                        <div class="showcase-info">
+                            <h4>Epic Battle Scene</h4>
+                            <p>An incredible fan-created artwork depicting an epic battle between heroes and demons</p>
+                            <div class="showcase-meta">
+                                <span class="showcase-artist">By: CommunityArtist123</span>
+                                <span class="showcase-platform">Posted on: r/Diablo</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="showcase-item">
+                        <img src="media/3.jpeg" alt="Fan Art 2" class="showcase-image">
+                        <div class="showcase-info">
+                            <h4>Sanctuary Reimagined</h4>
+                            <p>A stunning reinterpretation of Sanctuary's dark landscape by a talented community member</p>
+                            <div class="showcase-meta">
+                                <span class="showcase-artist">By: DiabloFanArt</span>
+                                <span class="showcase-platform">Posted on: ArtStation</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="showcase-item">
+                        <img src="media/4.jpg" alt="Fan Art 3" class="showcase-image">
+                        <div class="showcase-info">
+                            <h4>Character Portrait</h4>
+                            <p>A detailed character study showcasing the intricate design of Diablo IV's heroes</p>
+                            <div class="showcase-meta">
+                                <span class="showcase-artist">By: FantasyArtMaster</span>
+                                <span class="showcase-platform">Posted on: DeviantArt</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Filter buttons for gallery -->
+        <section class="filter-section">
+            <h3>Filter Content</h3>
+            <div class="filter-buttons">
+                <button onclick="filterGallery('all')" class="filter-btn active">All</button>
+                <button onclick="filterGallery('characters')" class="filter-btn">Characters</button>
+                <button onclick="filterGallery('artwork')" class="filter-btn">Artwork</button>
+                <button onclick="filterGallery('gameplay')" class="filter-btn">Gameplay</button>
+            </div>
+        </section>
+    </main>
+
+    <!-- Enhanced Footer -->
+    <footer>
+        <div class="footer-container">
+            <div class="footer-section">
+                <h2>Connect with Us</h2>
+                <div class="social-links">
+                    <a href="#" data-tooltip="Follow us on Facebook">
+                        <img src="media/fb.png" alt="Facebook" class="footer-img">
+                    </a>
+                    <a href="#" data-tooltip="Follow us on Instagram">
+                        <img src="media/insta.png" alt="Instagram" class="footer-img">
+                    </a>
+                    <a href="#" data-tooltip="Follow us on Twitter">
+                        <img src="media/twitter.png" alt="Twitter" class="footer-img">
+                    </a>
+                    <a href="#" data-tooltip="Subscribe to our YouTube">
+                        <img src="media/yt.jpeg" alt="YouTube" class="footer-img">
+                    </a>
+                </div>
+            </div>
+            
+            <div class="footer-section">
+                <h2>Quick Links</h2>
+                <ul id="foot">
+                    <li><a href="privacy.html">Privacy Policy</a></li>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="character.html">Characters</a></li>
+                    <li><a href="forum.html">Community</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-section">
+                <h2>Contact Information</h2>
+                <p>📧 Email: diabloproductions@product.com</p>
+                <p>📞 Phone: 015 638 2483</p>
+                <p>🌍 Web: www.diabloiv-portfolio.com</p>
+            </div>
+        </div>
+        
+        <div class="footer-bottom">
+            <p>&copy; 2024 DiabloProductions. All Rights Reserved. | Diablo IV &copy; Blizzard Entertainment</p>
+        </div>
+    </footer>
+
+    <script>
+        // Enhanced gallery filtering
+        function filterGallery(category) {
+            const items = document.querySelectorAll('.gallery-item');
+            const buttons = document.querySelectorAll('.filter-btn');
+            
+            // Update active button
+            buttons.forEach(btn => btn.classList.remove('active'));
+            event.target.classList.add('active');
+            
+            // Filter items
+            items.forEach(item => {
+                if (category === 'all') {
+                    item.style.display = 'block';
+                    item.classList.add('fade-in-up');
+                } else {
+                    // Add category classes to gallery items based on content
+                    const isCharacter = item.querySelector('img').alt.includes('Elias') || 
+                                       item.querySelector('img').alt.includes('Inarius') || 
+                                       item.querySelector('img').alt.includes('Lilith') || 
+                                       item.querySelector('img').alt.includes('Lorath');
+                    const isArtwork = item.querySelector('img').alt.includes('Artwork') || 
+                                     item.querySelector('img').alt.includes('Sanctuary');
+                    
+                    if ((category === 'characters' && isCharacter) || 
+                        (category === 'artwork' && isArtwork) ||
+                        (category === 'gameplay' && !isCharacter && !isArtwork)) {
+                        item.style.display = 'block';
+                        item.classList.add('fade-in-up');
+                    } else {
+                        item.style.display = 'none';
+                    }
+                }
+            });
+        }
+        
+        // Enhanced search functionality for portfolio
+        function openPage() {
+            const searchTerm = document.querySelector('input[type="text"]').value.toLowerCase();
+            
+            if (searchTerm) {
+                if (searchTerm.includes("character") || searchTerm.includes("elias") || 
+                    searchTerm.includes("inarius") || searchTerm.includes("lilith") || 
+                    searchTerm.includes("lorath")) {
+                    window.location.href = "character.html";
+                } else if (searchTerm.includes("about") || searchTerm.includes("home")) {
+                    window.location.href = "index.html";
+                } else if (searchTerm.includes("forum") || searchTerm.includes("community")) {
+                    window.location.href = "forum.html";
+                } else if (searchTerm.includes("diablo i") || searchTerm.includes("diablo 1")) {
+                    CurrentSlide(1);
+                } else if (searchTerm.includes("diablo ii") || searchTerm.includes("diablo 2")) {
+                    CurrentSlide(2);
+                } else if (searchTerm.includes("diablo iii") || searchTerm.includes("diablo 3")) {
+                    CurrentSlide(3);
+                } else if (searchTerm.includes("diablo iv") || searchTerm.includes("diablo 4")) {
+                    CurrentSlide(4);
+                } else {
+                    // Auto-filter gallery based on search
+                    if (searchTerm.includes("character")) {
+                        filterGallery('characters');
+                    } else if (searchTerm.includes("art")) {
+                        filterGallery('artwork');
+                    } else {
+                        alert(`No specific results for "${searchTerm}". Browse the gallery or try: characters, artwork, or specific character names.`);
+                    }
+                }
+            }
+        }
+        
+        // Keyboard navigation for slider
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'ArrowLeft') {
+                NextSlide(-1);
+            } else if (e.key === 'ArrowRight') {
+                NextSlide(1);
+            }
+        });
+        
+        // Auto-play toggle functionality
+        let autoPlayEnabled = true;
+        
+        function toggleAutoPlay() {
+            autoPlayEnabled = !autoPlayEnabled;
+            if (autoPlayEnabled) {
+                // Auto-play will resume from the JavaScript file
+                console.log('Auto-play enabled');
+            } else {
+                // Auto-play will be paused from the JavaScript file
+                console.log('Auto-play disabled');
+            }
+        }
+        
+        // Add auto-play toggle button
+        document.addEventListener('DOMContentLoaded', function() {
+            const sliderContainer = document.querySelector('.slider-container');
+            const toggleBtn = document.createElement('button');
+            toggleBtn.innerHTML = '⏸️';
+            toggleBtn.style.cssText = `
+                position: absolute;
+                top: 20px;
+                right: 20px;
+                background: rgba(139, 0, 0, 0.8);
+                color: var(--diablo-gold);
+                border: 2px solid var(--diablo-gold);
+                padding: 10px;
+                border-radius: 50%;
+                cursor: pointer;
+                z-index: 10;
+                font-size: 16px;
+            `;
+            toggleBtn.onclick = toggleAutoPlay;
+            toggleBtn.setAttribute('data-tooltip', 'Toggle auto-play');
+            sliderContainer.appendChild(toggleBtn);
+        });
+    </script>
+</body>
+</html>
